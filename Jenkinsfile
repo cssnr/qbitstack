@@ -67,6 +67,7 @@ pipeline {
                 setupOvhNfs("${STACK_NAME}/download")
                 setupOvhNfs("${STACK_NAME}/rabbit")
                 echo "Stack Push"
+                updateCompose("${COMPOSE_FILE}", "STACK_NAME", "${STACK_NAME}")
                 stackPush("${COMPOSE_FILE}")
                 echo "Stack Deploy"
                 stackDeploy("${COMPOSE_FILE}", "${STACK_NAME}")
@@ -101,6 +102,7 @@ pipeline {
                 setupOvhNfs("${STACK_NAME}/download")
                 setupOvhNfs("${STACK_NAME}/rabbit")
                 echo "Stack Push"
+                updateCompose("${COMPOSE_FILE}", "STACK_NAME", "${STACK_NAME}")
                 stackPush("${COMPOSE_FILE}")
                 echo "Stack Deploy"
                 stackDeploy("${COMPOSE_FILE}", "${STACK_NAME}")
