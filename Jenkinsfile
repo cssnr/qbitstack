@@ -51,6 +51,7 @@ pipeline {
                 NFS_DIRECTORY = "${NFS_BASE}/${STACK_NAME}"
                 QBIT_PORT = "40106"
                 RABBIT_PORT = "40107"
+                TRAEFIK_HOST = "qbittorrent-dev.cssnr.com"
             }
             steps {
                 echo "\n--- Starting Dev Deploy ---\n" +
@@ -84,6 +85,7 @@ pipeline {
                 NFS_DIRECTORY = "${NFS_BASE}/${STACK_NAME}"
                 QBIT_PORT = "40106"
                 RABBIT_PORT = "40107"
+                TRAEFIK_HOST = "qbittorrent.cssnr.com"
             }
             steps {
                 echo "\n--- Starting Prod Deploy ---\n" +
